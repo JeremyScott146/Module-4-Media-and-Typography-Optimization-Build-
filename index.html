@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jeremy Scott's Portfolio Site</title>
+
+    <meta name="author" content="Jeremy Scott">
+    <meta name="description" content="Hi, I'm Jeremy Scott. I'm a full-stack web developer and I love building responsive websites. Come check out my latest projects!">
+
+    <!-- favicon image created/owned by me (Jeremy Scott) -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- Link to stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!--
+      Provenance notes:
+      Images: Graphic Design Projects Card Image.png and Web Development Projects Card Image.png are my own creation.
+      They were exported as WebP files at 480px, 960px, and 1536px wide (included JPEG fallbacks just in case).
+      Self portrait: My own selfie that I control the rights to. WebP versions at 480px, 800px, and 1200px wide.
+      SVG icons: HTML5, CSS3, Node, Python, React, and database icons were added. Social media SVGs are used as linked icons.
+      Video/embed: Midnight Line video is my own project hosted on my YouTube channel. 
+      Fonts: Inter and Poppins are imported into style.css from Google Fonts and use open-source font licenses with websafe fallbacks included.
+    -->
+</head>
+
+<body id="top">
+    <header class="site-header">
+        <div class="container">
+            <nav class="site-nav" aria-label="Primary navigation">
+                <ul class="nav-list">
+                    <li><a href="#" aria-current="page">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="about" class="intro-section">
+            <div class="intro-content">
+                <h1 class="text-fluid-lg">Jeremy Scott's Portfolio Site</h1>
+                <p class="intro-copy">I'm a full-stack web developer and designer who enjoys building responsive, accessible websites and visual projects.</p>
+            </div>
+
+            <!-- Responsive Self-Portrait -->
+            <div class="hero-image">
+                <!-- Copyright (c) 2026 Jeremy Scott <jscot146@asu.edu>
+                     Provenance:
+                     The rights to these images are owned exclusively by me (Jeremy Scott)
+                     who took this photo myself. 
+                     File: assets/images/self-portrait-800w.webp (local file)
+                -->
+                <img
+                    src="assets/images/self-portrait-800w.webp"
+
+                    srcset="
+                        assets/images/self-portrait-480w.webp 480w,
+                        assets/images/self-portrait-800w.webp 800w,
+                        assets/images/self-portrait-1200w.webp 1200w
+                    "
+                    sizes="
+                        (max-width: 600px) 90vw,
+                        (max-width: 1000px) 50vw,
+                        400px
+                    "
+                    width="1200"
+                    height="1413"
+
+                    alt="Self-portrait of programmer Jeremy Scott wearing glasses and a gray beanie."
+                >
+            </div>
+        </section>
+
+        <!--
+          responsive images / art direction notes:
+          both project collages were designed as wide 3:2 compositions, so the same composition works at narrow and wide widths.
+          picture is still added for modern WebP sources (plus includes a JPEG fallback).
+          srcset/sizes lets the browser choose a smaller file when the card is displayed at a smaller width.
+          width and height reserve the 3:2 image area before download to reduce layout shift.
+        -->
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">My Projects</h2>
+            <div class="grid-layout">
+                <div class="project-container">
+                    <article class="project-card">
+                        <picture class="project-media">
+                            <source
+                                type="image/webp"
+                                srcset="assets/images/graphic-design-480.webp 480w,
+                                        assets/images/graphic-design-960.webp 960w,
+                                        assets/images/graphic-design-1536.webp 1536w"
+                                sizes="(min-width: 70rem) 34rem, (min-width: 45rem) 45vw, 100vw">
+                            <img
+                                src="assets/images/graphic-design.jpg"
+                                width="1536"
+                                height="1024"
+                                loading="lazy"
+                                decoding="async"
+                                alt="Collage of Jeremy Scott's recent graphic design projects, including Dreams vs. AI, Chasing the Dead, and Euro Stile 25 poster designs.">
+                        </picture>
+                        <div class="project-content">
+                            <h3>Graphic Design Projects</h3>
+                            <p>Selected poster, typography, and visual design work from my portfolio.</p>
+                            <a href="https://github.com/JeremyScott146" class="btn">View Project</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="project-container">
+                    <article class="project-card">
+                        <picture class="project-media">
+                            <source
+                                type="image/webp"
+                                srcset="assets/images/web-development-480.webp 480w,
+                                        assets/images/web-development-960.webp 960w,
+                                        assets/images/web-development-1536.webp 1536w"
+                                sizes="(min-width: 70rem) 34rem, (min-width: 45rem) 45vw, 100vw">
+                            <img
+                                src="assets/images/web-development.jpg"
+                                width="1536"
+                                height="1024"
+                                loading="lazy"
+                                decoding="async"
+                                alt="Collage of Jeremy Scott's recent web development projects showing responsive website layouts.">
+                        </picture>
+                        <div class="project-content">
+                            <h3>Web Development Projects</h3>
+                            <p>Checkout the Responsive websites I've worked on for recent projects.</p>
+                            <a href="https://github.com/JeremyScott146" class="btn">View Project</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="project-card contact-card">
+            <h2>Contact Me</h2>
+            <form action="#">
+                <div class="form-field">
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        class="form-input"
+                        placeholder="youremail@email.com"
+                        required>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <h2>My Skills</h2>
+            <!-- Techstack icon SVGs are informative, so no descriptive alt text needed -->
+            <div class="skills-grid">
+                <span class="tech-badge"><img src="assets/icons/html5.svg" alt="HTML5 logo" width="28" height="28">HTML</span>
+                <span class="tech-badge"><img src="assets/icons/css3-alt-brands-solid-full.svg" alt="CSS3 logo" width="28" height="28">CSS</span>
+                <span class="tech-badge"><img src="assets/icons/react-brands-solid-full.svg" alt="React logo" width="28" height="28">React</span>
+                <span class="tech-badge"><img src="assets/icons/node-brands-solid-full.svg" alt="Node.js logo" width="28" height="28">Node.js</span>
+                <span class="tech-badge"><img src="assets/icons/python-brands-solid-full.svg" alt="Python logo" width="28" height="28">Python</span>
+                <span class="tech-badge"><img src="assets/icons/database-solid-full.svg" alt="Database icon" width="28" height="28">Databases</span>
+            </div>
+        </section>
+
+        <!-- embedded media accessibility: descriptive title, visible controls from YouTube, reserved 16:9 region, fallback link and text alternative -->
+        <section class="media-section" aria-labelledby="media-heading">
+            <h2 id="media-heading">Midnight Line Animation</h2>
+            <p class="media-description">A motion graphics project featuring the Midnight Line visual world and animation work.</p>
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/Ui_dliB5gw0?si=B3ylWp-_W16J2BA9"
+                    title="Midnight Line animation project by Jeremy Scott"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p class="media-alternative">
+                If the embedded player does not load, clicke here to watch <a href="https://www.youtube.com/watch?v=Ui_dliB5gw0"> Momo's Midnight Line - 005 |Snowfall Terminal Lofi music video on YouTube</a>.
+                
+            </p>
+        </section>
+
+        <!-- btt -->
+        <a href="#top" class="back-to-top">Back to Top</a>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Jeremy Scott. GIT 414/514 Fall Session-A 62919 | 76175</p>
+
+        <!-- socials container -->
+        <div class="socials-container" aria-label="Social media links">
+            <a href="https://github.com/JeremyScott146/" aria-label="Jeremy Scott on GitHub">
+                <img src="assets/icons/github.svg" alt="" width="32" height="32">
+            </a>
+            <a href="https://www.instagram.com/steak_nachos/" aria-label="Jeremy Scott on Instagram">
+                <img src="assets/icons/instagram.svg" alt="" width="32" height="32">
+            </a>
+            <a href="https://www.linkedin.com/in/jeremy-scott-93b038147/" aria-label="Jeremy Scott on LinkedIn">
+                <img src="assets/icons/linkedin-svgrepo-com.svg" alt="" width="32" height="32">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

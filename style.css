@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap');
+/* poppins + inter fonts import */
+
+/* Jeremy Scott's Portfolio Site 
+GIT 414/514 Fall Session-A 62919 | 76175
+CSS Architecture Package
+*/ 
+@layer reset, base, layout, components, utilities, states, overrides;
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body,
+  h1,
+  h2,
+  h3,
+  p, 
+  ul, 
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  img,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  button,
+  input,
+  textarea {
+    font: inherit;
+  }
+}
+
+@layer base {
+  :root {
+    /* Color tokens */
+    --color-bg: #f4f4f4;
+    --color-primary: #2e2e2e;
+    --color-secondary: #ffffff;
+    --color-surface: #f5f5f5;
+    --color-text: #222222;
+    --color-text-muted: #666666;
+    --color-primary-hover: #4930b8;
+    --color-border: #d9d9d9;
+    --color-error: #c62828;
+    --color-focus: #47ffbb;
+
+    /* component tokens */
+    --card-bg: var(--color-surface);
+    --card-border: var(--color-border);
+    --button-bg: var(--color-primary);
+    --btn-txt: var(--color-secondary);
+
+    /* Typography */
+    --font-body: "Inter", Arial, sans-serif;
+    --font-heading: 'Poppins', Arial, Helvetica, sans-serif;
+
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.25rem;
+    --text-xl: 2rem;
+
+
+    /* Spacing */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.5rem;
+    --space-6: 2rem;
+    --space-8: 3rem;
+    --space-10: 4rem;
+
+    /* Shape */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
+
+    /* Layout */
+    --container-max: 70rem;
+
+    /* Focus */
+    --focus-width: 3px;
+    --focus-color: #47ffbb;
+    --focus-offset: 3px;
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading);
+    color: var(--color-text);
+    line-height: 1.2;
+  }
+
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+}
+
+@layer layout {
+    .container {
+        width: min(100% - 2rem, var(--container-max));
+        margin-inline: auto;
+    }
+
+    main {
+        padding-block: clamp(2rem, 5vw, 4rem);
+    }
+
+    .grid-layout {
+        display: grid;
+        grid-template-columns:
+            repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+        gap: var(--space-5);
+        margin-block: var(--space-6);
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns:
+            repeat(auto-fill, minmax(8rem, 1fr));
+        gap: var(--space-3);
+        margin-block: var(--space-4);
+    }
+
+    .project-container {
+        container-type: inline-size;
+    }
+
+    /* intro section and responsive self portrait */
+    .intro-section {
+        display: grid;
+        gap: var(--space-5);
+        align-items: center;
+        margin-block-end: var(--space-6);
+    }
+
+    .intro-copy {
+        max-width: 65ch;
+    }
+
+    .hero-image {
+        width: min(100%, 25rem);
+        margin-inline: auto;
+        aspect-ratio: 1200 / 1413;
+        overflow: hidden;
+        border-radius: var(--radius-lg);
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+@layer components {
+    /* nav bar & header sections */
+    .site-header {
+        background: var(--color-surface);
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    align-items: center;
+    padding-block: var(--space-3);
+    }
+
+    /* project card */
+    .project-card {
+    display: grid;
+    background: var(--card-bg);
+    padding: var(--space-4);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-md);
+    gap: var(--space-3);
+    }
+
+    /* le buttons */ 
+    .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    background: var(--button-bg);
+    color: var(--btn-txt);
+    border: 0;
+    }
+
+    @supports (width: fit-content) {
+    .btn {
+        width: fit-content;
+    }
+    }
+
+    .back-to-top {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-2) var(--space-4);
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+
+    position: fixed;
+    inset-inline-end: var(--space-4);
+    inset-block-end: var(--space-4);
+    }
+
+    /* tech stack */ 
+    .tech-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: var(--space-2) var(--space-3);
+        border-radius: var(--radius-lg);
+        background: var(--color-primary);
+        color: var(--color-secondary);
+    }
+
+    /* Social container */
+    .socials-container {
+        display: flex;
+        gap: 20px;
+    }
+
+    .socials-container a {
+        background-color: var(--color-bg);
+        padding: 1em;
+        border-radius: 50%;
+        height: var(--space-10);
+        width: var(--space-10);
+        box-sizing: border-box;
+        flex-shrink: 0;
+        display: grid;
+        place-items: center;
+
+    }
+
+    .socials-container a svg {
+        height: 32px;
+    }
+
+    /* forms */ 
+    .form-field {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-1);
+    }
+
+    
+    .form-input {
+        padding: var(--space-2);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-sm);
+        background: var(--color-surface);
+    }
+
+    /* footer sections */
+    .site-footer {
+        background: var(--color-text);
+        color: var(--color-secondary);
+        text-align: center;
+        padding: var(--space-3);
+        margin: var(--space-6);
+    }
+
+    @container (min-width: 30rem) {
+    .project-card {
+        grid-template-columns: 1fr auto;
+        align-items: center;
+    }
+
+    .project-card h2 {
+        grid-column: 1 / -1;
+    }
+    }
+}
+
+@layer utilities {
+    /* used google/AI on this section to find ideas previously for utilities for a portfolio site */ 
+    /* fluid typography between different size viewports */ 
+    .text-fluid-lg {
+        font-size: clamp(1.25rem, 2vw + 1rem, 2.25rem);
+    }
+
+    /* hide scrollbars */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none; /* Safari & Chrome */ 
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none; /* IE & Edge */ 
+        scrollbar-width: none; /* firefox */
+    }
+
+    .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        white-space: nowrap;
+        border: 0;
+    }
+}
+
+@layer states {
+    .nav-list a:hover {
+        color: var(--color-primary-hover);
+    }
+
+    .btn:hover {
+        background: var(--color-primary-hover);
+    }
+
+    *:focus-visible {
+    outline: var(--focus-width) solid var(--focus-color);
+    outline-offset: var(--focus-offset);
+    }
+
+    .nav-list a[aria-current="page"] {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    }
+
+    .form-input:invalid:not(:placeholder-shown) {
+    border-color: var(--color-error);
+    }
+
+    .back-to-top:hover {
+    background: var(--color-primary-hover);
+    }
+
+    .back-to-top:focus-visible {
+    outline: var(--focus-width) solid var(--focus-color);
+    outline-offset: var(--focus-offset);
+    }
+}
+
+@layer overrides {
+}
+
+@media print {
+        .site-header, .site-footer, .btn {
+            display: none;
+        }
+
+        body {
+            background: var(--color-secondary);
+            color: var(--color-primary);
+            font-size: large;
+        }
+    }
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms;
+        animation-iteration-count: 1;
+        transition-duration: 0.01ms;
+    }
+}    
+
+@media (min-width: 45rem) {
+    .intro-section {
+        grid-template-columns: minmax(0, 1fr) minmax(16rem, 25rem);
+    }
+
+    .nav-list {
+        flex-wrap: nowrap;
+        gap: var(--space-5);
+    }
+}    
+
+/* --==================================================================================================================-- */
+/* Module 4 additions */
+/* project images are owned/created by me (Jeremy Scott) and exported locally as compressed WebP + JPEG fallback files */
+/* local SVG files for skill/social icons; social icon meaning is supplied by aria-label on each link */
+/* Google Fonts: Inter + Poppins use open-source licenses; Arial/Helvetica/sans-serif provide fallback behavior */
+
+@layer base {
+  :root {
+    /* typography additions */
+    --text-xs: 0.75rem;
+    --text-2xl: clamp(2rem, 4vw + 1rem, 3.5rem);
+    --line-body: 1.6;
+    --line-heading: 1.2;
+    --measure: 68ch;
+  }
+
+  body {
+    line-height: var(--line-body);
+  }
+
+  h1,
+  h2,
+  h3 {
+    line-height: var(--line-heading);
+  }
+
+  p {
+    max-width: var(--measure);
+  }
+}
+
+@layer layout {
+  .intro-section,
+  .skills-section,
+  .media-section {
+    margin-block: var(--space-6);
+  }
+
+  .intro-copy,
+  .media-description,
+  .media-alternative {
+    margin-block-start: var(--space-3);
+  }
+}
+
+@layer components {
+  /* responsive project media reserves a 3:2 area for the image to load */
+  .project-media {
+    display: block;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+  }
+
+  .project-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .project-content {
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  .contact-card {
+    margin-block: var(--space-6);
+  }
+
+  .contact-card form {
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  .tech-badge {
+    gap: var(--space-2);
+  }
+
+  .tech-badge img {
+    inline-size: 1.75rem;
+    block-size: 1.75rem;
+    object-fit: contain;
+  }
+
+  /* 16:9 aspect ratio prevents the YouTube embed from causing layout-shift */
+  .video-wrapper {
+    width: 100%;
+    max-width: 56rem;
+    aspect-ratio: 16 / 9;
+    margin-block: var(--space-4);
+    background: var(--color-primary);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+
+  .video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .socials-container {
+    justify-content: center;
+    margin-block-start: var(--space-3);
+  }
+
+  .socials-container a img {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+@layer utilities {
+  /* fluid heading size to support narrow and wide screens */
+  .text-fluid-lg {
+    font-size: var(--text-2xl);
+  }
+}
+
+@media print {
+  .video-wrapper,
+  .back-to-t

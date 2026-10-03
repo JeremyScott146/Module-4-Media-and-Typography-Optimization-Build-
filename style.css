@@ -532,3 +532,52 @@ CSS Architecture Package
 @media print {
   .video-wrapper,
   .back-to-t
+
+/* Module 5 accessibility additions */
+
+@layer components {
+  .skip-link {
+    position: absolute;
+    inset-inline-start: var(--space-4);
+    inset-block-start: -5rem;
+    z-index: 1000;
+    padding: var(--space-2) var(--space-4);
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  #email-instructions {
+    margin-block-end: var(--space-2);
+  }
+}
+
+@layer states {
+  .skip-link:focus {
+    inset-block-start: var(--space-4);
+  }
+
+  .form-input:invalid:not(:placeholder-shown) {
+    border: 2px solid var(--color-error);
+  }
+
+  .media-alternative a {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+
+  .media-alternative a:hover {
+    text-decoration-thickness: 2px;
+  }
+}
+ 
+@media (max-width: 30rem) {
+  .back-to-top {
+    position: static;
+    margin-block-start: var(--space-4);
+  }
+}
+
+

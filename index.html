@@ -27,6 +27,10 @@
 </head>
 
 <body id="top">
+    <!-- Skip to main content link for keyboard users -->
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
     <header class="site-header">
         <div class="container">
             <nav class="site-nav" aria-label="Primary navigation">
@@ -41,7 +45,7 @@
         </div>
     </header>
 
-    <main class="container">
+    <main id="main-content" class="container">
         <section id="about" class="intro-section">
             <div class="intro-content">
                 <h1 class="text-fluid-lg">Jeremy Scott's Portfolio Site</h1>
@@ -107,7 +111,7 @@
                         <div class="project-content">
                             <h3>Graphic Design Projects</h3>
                             <p>Selected poster, typography, and visual design work from my portfolio.</p>
-                            <a href="https://github.com/JeremyScott146" class="btn">View Project</a>
+                            <a href="https://github.com/JeremyScott146" class="btn">View Graphic Design Projects</a>
                         </div>
                     </article>
                 </div>
@@ -132,7 +136,7 @@
                         <div class="project-content">
                             <h3>Web Development Projects</h3>
                             <p>Checkout the Responsive websites I've worked on for recent projects.</p>
-                            <a href="https://github.com/JeremyScott146" class="btn">View Project</a>
+                            <a href="https://github.com/JeremyScott146" class="btn">View Web Development Projects</a>
                         </div>
                     </article>
                 </div>
@@ -142,13 +146,19 @@
         <section id="contact" class="project-card contact-card">
             <h2>Contact Me</h2>
             <form action="#">
+                <p id="email-instructions">
+                    Enter your email address using the format name@example.com. This field is required.
+                </p>
                 <div class="form-field">
                     <label for="email">Email Address</label>
                     <input
                         type="email"
                         id="email"
+                        name="email"
                         class="form-input"
-                        placeholder="youremail@email.com"
+                        placeholder="name@example.com"
+                        autocomplete="email"
+                        aria-describedby="email-instructions"
                         required>
                 </div>
                 <button type="submit" class="btn">Submit</button>
@@ -157,18 +167,18 @@
 
         <section id="skills" class="skills-section">
             <h2>My Skills</h2>
-            <!-- Techstack icon SVGs are informative, so no descriptive alt text needed -->
+            <!-- Techstack icon SVGs are decorative -->
             <div class="skills-grid">
-                <span class="tech-badge"><img src="assets/icons/html5.svg" alt="HTML5 logo" width="28" height="28">HTML</span>
-                <span class="tech-badge"><img src="assets/icons/css3-alt-brands-solid-full.svg" alt="CSS3 logo" width="28" height="28">CSS</span>
-                <span class="tech-badge"><img src="assets/icons/react-brands-solid-full.svg" alt="React logo" width="28" height="28">React</span>
-                <span class="tech-badge"><img src="assets/icons/node-brands-solid-full.svg" alt="Node.js logo" width="28" height="28">Node.js</span>
-                <span class="tech-badge"><img src="assets/icons/python-brands-solid-full.svg" alt="Python logo" width="28" height="28">Python</span>
-                <span class="tech-badge"><img src="assets/icons/database-solid-full.svg" alt="Database icon" width="28" height="28">Databases</span>
+                <span class="tech-badge"><img src="assets/icons/html5.svg" alt="" width="28" height="28">HTML</span>
+                <span class="tech-badge"><img src="assets/icons/css3-alt-brands-solid-full.svg" alt="" width="28" height="28">CSS</span>
+                <span class="tech-badge"><img src="assets/icons/react-brands-solid-full.svg" alt="" width="28" height="28">React</span>
+                <span class="tech-badge"><img src="assets/icons/node-brands-solid-full.svg" alt="" width="28" height="28">Node.js</span>
+                <span class="tech-badge"><img src="assets/icons/python-brands-solid-full.svg" alt="" width="28" height="28">Python</span>
+                <span class="tech-badge"><img src="assets/icons/database-solid-full.svg" alt="" width="28" height="28">Databases</span>
             </div>
         </section>
 
-        <!-- embedded media accessibility: descriptive title, visible controls from YouTube, reserved 16:9 region, fallback link and text alternative -->
+        <!-- embedded media accessibility -->
         <section class="media-section" aria-labelledby="media-heading">
             <h2 id="media-heading">Midnight Line Animation</h2>
             <p class="media-description">A motion graphics project featuring the Midnight Line visual world and animation work.</p>
@@ -183,7 +193,7 @@
                 </iframe>
             </div>
             <p class="media-alternative">
-                If the embedded player does not load, clicke here to watch <a href="https://www.youtube.com/watch?v=Ui_dliB5gw0"> Momo's Midnight Line - 005 |Snowfall Terminal Lofi music video on YouTube</a>.
+                If the embedded player does not load, click here to watch <a href="https://www.youtube.com/watch?v=Ui_dliB5gw0"> Momo's Midnight Line - 005 |Snowfall Terminal Lofi music video on YouTube</a>.
                 
             </p>
         </section>

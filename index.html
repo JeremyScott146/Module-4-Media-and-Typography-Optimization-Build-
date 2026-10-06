@@ -3,11 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!-- Main Title -->
     <title>Jeremy Scott's Portfolio Site</title>
 
     <meta name="author" content="Jeremy Scott">
     <meta name="description" content="Hi, I'm Jeremy Scott. I'm a full-stack web developer and I love building responsive websites. Come check out my latest projects!">
+
+    <!-- Module 6: Social preview metadata -->
+    <meta property="og:title" content="Jeremy Scott | Full-Stack Web Developer & Designer">
+    <meta property="og:description" content="Portfolio of Jeremy Scott, a full-stack web developer and designer creating responsive, accessible websites and visual projects.">
+    <meta property="og:url" content="https://jeremyscott146.github.io/Module-4-Media-and-Typography-Optimization-Build-/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jeremyscott146.github.io/Module-4-Media-and-Typography-Optimization-Build-/assets/images/self-portrait-1200w.webp">
+    <meta property="og:image:alt" content="Self-portrait of Jeremy Scott wearing glasses and a gray beanie.">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jeremy Scott",
+      "url": "https://jeremyscott146.github.io/Module-4-Media-and-Typography-Optimization-Build-/",
+      "jobTitle": "Full-Stack Web Developer and Designer",
+      "description": "Full-stack web developer and designer who builds responsive, accessible websites and visual projects.",
+      "image": "https://jeremyscott146.github.io/Module-4-Media-and-Typography-Optimization-Build-/assets/images/self-portrait-1200w.webp"
+    }
+    </script>
 
     <!-- favicon image created/owned by me (Jeremy Scott) -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -31,6 +52,7 @@
     <a class="skip-link" href="#main-content">
         Skip to main content
     </a>
+
     <header class="site-header">
         <div class="container">
             <nav class="site-nav" aria-label="Primary navigation">
@@ -60,17 +82,22 @@
                      who took this photo myself. 
                      File: assets/images/self-portrait-800w.webp (local file)
                 -->
+
                 <img
                     src="assets/images/self-portrait-800w.webp"
-
                     srcset="
                         assets/images/self-portrait-480w.webp 480w,
+
                         assets/images/self-portrait-800w.webp 800w,
+
                         assets/images/self-portrait-1200w.webp 1200w
                     "
                     sizes="
+
                         (max-width: 600px) 90vw,
+
                         (max-width: 1000px) 50vw,
+
                         400px
                     "
                     width="1200"
@@ -88,6 +115,7 @@
           srcset/sizes lets the browser choose a smaller file when the card is displayed at a smaller width.
           width and height reserve the 3:2 image area before download to reduce layout shift.
         -->
+
         <section id="projects" aria-labelledby="projects-heading">
             <h2 id="projects-heading">My Projects</h2>
             <div class="grid-layout">
@@ -97,10 +125,14 @@
                             <source
                                 type="image/webp"
                                 srcset="assets/images/graphic-design-480.webp 480w,
+
                                         assets/images/graphic-design-960.webp 960w,
+
                                         assets/images/graphic-design-1536.webp 1536w"
+
                                 sizes="(min-width: 70rem) 34rem, (min-width: 45rem) 45vw, 100vw">
                             <img
+
                                 src="assets/images/graphic-design.jpg"
                                 width="1536"
                                 height="1024"
@@ -108,6 +140,7 @@
                                 decoding="async"
                                 alt="Collage of Jeremy Scott's recent graphic design projects, including Dreams vs. AI, Chasing the Dead, and Euro Stile 25 poster designs.">
                         </picture>
+
                         <div class="project-content">
                             <h3>Graphic Design Projects</h3>
                             <p>Selected poster, typography, and visual design work from my portfolio.</p>
@@ -122,10 +155,14 @@
                             <source
                                 type="image/webp"
                                 srcset="assets/images/web-development-480.webp 480w,
+
                                         assets/images/web-development-960.webp 960w,
+
                                         assets/images/web-development-1536.webp 1536w"
+
                                 sizes="(min-width: 70rem) 34rem, (min-width: 45rem) 45vw, 100vw">
                             <img
+
                                 src="assets/images/web-development.jpg"
                                 width="1536"
                                 height="1024"
@@ -133,6 +170,7 @@
                                 decoding="async"
                                 alt="Collage of Jeremy Scott's recent web development projects showing responsive website layouts.">
                         </picture>
+
                         <div class="project-content">
                             <h3>Web Development Projects</h3>
                             <p>Checkout the Responsive websites I've worked on for recent projects.</p>
@@ -149,6 +187,7 @@
                 <p id="email-instructions">
                     Enter your email address using the format name@example.com. This field is required.
                 </p>
+
                 <div class="form-field">
                     <label for="email">Email Address</label>
                     <input
@@ -192,9 +231,9 @@
                     allowfullscreen>
                 </iframe>
             </div>
+
             <p class="media-alternative">
                 If the embedded player does not load, click here to watch <a href="https://www.youtube.com/watch?v=Ui_dliB5gw0"> Momo's Midnight Line - 005 |Snowfall Terminal Lofi music video on YouTube</a>.
-                
             </p>
         </section>
 
@@ -203,16 +242,18 @@
     </main>
 
     <footer class="site-footer">
-        <p>&copy; 2026 Jeremy Scott. GIT 414/514 Fall Session-A 62919 | 76175</p>
+        <p>© 2026 Jeremy Scott. GIT 414/514 Fall Session-A 62919 | 76175</p>
 
         <!-- socials container -->
         <div class="socials-container" aria-label="Social media links">
             <a href="https://github.com/JeremyScott146/" aria-label="Jeremy Scott on GitHub">
                 <img src="assets/icons/github.svg" alt="" width="32" height="32">
             </a>
+
             <a href="https://www.instagram.com/steak_nachos/" aria-label="Jeremy Scott on Instagram">
                 <img src="assets/icons/instagram.svg" alt="" width="32" height="32">
             </a>
+
             <a href="https://www.linkedin.com/in/jeremy-scott-93b038147/" aria-label="Jeremy Scott on LinkedIn">
                 <img src="assets/icons/linkedin-svgrepo-com.svg" alt="" width="32" height="32">
             </a>

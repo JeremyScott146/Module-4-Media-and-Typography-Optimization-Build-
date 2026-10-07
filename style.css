@@ -3,8 +3,9 @@
 
 /* Jeremy Scott's Portfolio Site 
 GIT 414/514 Fall Session-A 62919 | 76175
-CSS Architecture Package
+Capstone - Portfolio Project
 */ 
+
 @layer reset, base, layout, components, utilities, states, overrides;
 @layer reset {
   *,
@@ -579,5 +580,3 @@ CSS Architecture Package
     margin-block-start: var(--space-4);
   }
 }
-
-

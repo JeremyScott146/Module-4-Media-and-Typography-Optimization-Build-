@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jeremyscott146.github.io/Module-4-Media-and-Typography-Optimization-Build-/sitemap.xml

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Main Title -->
+    <title>Projects | Jeremy Scott</title>
+
+    <meta name="author" content="Jeremy Scott">
+    <meta name="description" content="Explore graphic design, responsive web development, and Midnight Line motion graphics projects by Jeremy Scott.">
+
+    <!-- Module 6: Discoverability and canonical/indexing decisions -->
+    <link rel="canonical" href="https://jeremyscott146.github.io/Module-4-Media-and-Typography-Optimization-Build-/projects.html">
+    <meta name="robots" content="index, follow">
+
+    <!-- Module 6: Social preview metadata -->
+    <meta property="og:title" content="Projects | Jeremy Scott">
+    <meta property="og:description" content="Explore graphic design, responsive web development, and Midnight Line motion graphics projects by Jeremy Scott.">
+    <meta property="og:url" content="https://jeremyscott146.github.io/Module-4-Media-and-Typography-Optimization-Build-/projects.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jeremyscott146.github.io/Module-4-Media-and-Typography-Optimization-Build-/assets/images/self-portrait-1200w.webp">
+    <meta property="og:image:alt" content="Self-portrait of Jeremy Scott wearing glasses and a gray beanie.">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1413">
+    <meta property="og:site_name" content="Jeremy Scott Portfolio">
+
+<!-- favicon image created/owned by me (Jeremy Scott) -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- Link to stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!--
+      Provenance notes:
+      Images: Graphic Design Projects Card Image.png and Web Development Projects Card Image.png are my own creation.
+      They were exported as WebP files at 480px, 960px, and 1536px wide (included JPEG fallbacks just in case).
+      Self portrait: My own selfie that I control the rights to. WebP versions at 480px, 800px, and 1200px wide.
+      SVG icons: HTML5, CSS3, Node, Python, React, and database icons were added. Social media SVGs are used as linked icons.
+      Video/embed: Midnight Line video is my own project hosted on my YouTube channel. 
+      Fonts: Inter and Poppins are imported into style.css from Google Fonts and use open-source font licenses with websafe fallbacks included.
+    -->
+</head>
+
+<body id="top">
+    <!-- Skip to main content link for keyboard users -->
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
+
+    <header class="site-header">
+        <div class="container">
+            <nav class="site-nav" aria-label="Primary navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="projects.html" aria-current="page">Projects</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="container">
+        <section id="projects" aria-labelledby="projects-heading">
+            <h1 id="projects-heading">My Projects</h1>
+            <div class="grid-layout">
+                <div class="project-container">
+                    <article class="project-card">
+                        <picture class="project-media">
+                            <source
+                                type="image/webp"
+                                srcset="assets/images/graphic-design-480.webp 480w,
+
+                                        assets/images/graphic-design-960.webp 960w,
+
+                                        assets/images/graphic-design-1536.webp 1536w"
+
+                                sizes="(min-width: 70rem) 34rem, (min-width: 45rem) 45vw, 100vw">
+                            <img
+
+                                src="assets/images/graphic-design.jpg"
+                                width="1536"
+                                height="1024"
+                                loading="lazy"
+                                decoding="async"
+                                alt="Collage of Jeremy Scott's recent graphic design projects, including Dreams vs. AI, Chasing the Dead, and Euro Stile 25 poster designs.">
+                        </picture>
+
+                        <div class="project-content">
+                            <h3>Graphic Design Projects</h3>
+                            <p>Selected poster, typography, and visual design work from my portfolio.</p>
+                            <a href="https://github.com/JeremyScott146" class="btn">View Graphic Design Projects</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="project-container">
+                    <article class="project-card">
+                        <picture class="project-media">
+                            <source
+                                type="image/webp"
+                                srcset="assets/images/web-development-480.webp 480w,
+
+                                        assets/images/web-development-960.webp 960w,
+
+                                        assets/images/web-development-1536.webp 1536w"
+
+                                sizes="(min-width: 70rem) 34rem, (min-width: 45rem) 45vw, 100vw">
+                            <img
+
+                                src="assets/images/web-development.jpg"
+                                width="1536"
+                                height="1024"
+                                loading="lazy"
+                                decoding="async"
+                                alt="Collage of Jeremy Scott's recent web development projects showing responsive website layouts.">
+                        </picture>
+
+                        <div class="project-content">
+                            <h3>Web Development Projects</h3>
+                            <p>Explore responsive websites I've built for recent projects.</p>
+                            <a href="https://github.com/JeremyScott146" class="btn">View Web Development Projects</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- embedded media accessibility -->
+        <section class="media-section" aria-labelledby="media-heading">
+            <h2 id="media-heading">Midnight Line Animation</h2>
+            <p class="media-description">A motion graphics project featuring the Midnight Line visual world and animation work.</p>
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/Ui_dliB5gw0?si=B3ylWp-_W16J2BA9"
+                    title="Midnight Line animation project by Jeremy Scott"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <p class="media-alternative">
+                If the embedded player does not load, click here to watch <a href="https://www.youtube.com/watch?v=Ui_dliB5gw0"> Momo's Midnight Line - 005 |Snowfall Terminal Lofi music video on YouTube</a>.
+            </p>
+        </section>
+
+
+        <!-- btt -->
+        <a href="#top" class="back-to-top">Back to Top</a>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Jeremy Scott. GIT 414/514 Fall Session-A 62919 | 76175</p>
+
+        <!-- socials container -->
+        <div class="socials-container" aria-label="Social media links">
+            <a href="https://github.com/JeremyScott146/" aria-label="Jeremy Scott on GitHub">
+                <img src="assets/icons/github.svg" alt="" width="32" height="32">
+            </a>
+
+            <a href="https://www.instagram.com/steak_nachos/" aria-label="Jeremy Scott on Instagram">
+                <img src="assets/icons/instagram.svg" alt="" width="32" height="32">
+            </a>
+
+            <a href="https://www.linkedin.com/in/jeremy-scott-93b038147/" aria-label="Jeremy Scott on LinkedIn">
+                <img src="assets/icons/linkedin-svgrepo-com.svg" alt="" width="32" height="32">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

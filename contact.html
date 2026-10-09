@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Main Title -->
+    <title>Contact | Jeremy Scott</title>
+
+    <meta name="author" content="Jeremy Scott">
+    <meta name="description" content="Find contact information and the contact form demonstration on Jeremy Scott’s portfolio.">
+
+    <!-- Module 6: Discoverability and canonical/indexing decisions -->
+    <link rel="canonical" href="https://jeremyscott146.github.io/Module-4-Media-and-Typography-Optimization-Build-/contact.html">
+    <meta name="robots" content="index, follow">
+
+    <!-- Module 6: Social preview metadata -->
+    <meta property="og:title" content="Contact | Jeremy Scott">
+    <meta property="og:description" content="Find contact information and the contact form demonstration on Jeremy Scott’s portfolio.">
+    <meta property="og:url" content="https://jeremyscott146.github.io/Module-4-Media-and-Typography-Optimization-Build-/contact.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jeremyscott146.github.io/Module-4-Media-and-Typography-Optimization-Build-/assets/images/self-portrait-1200w.webp">
+    <meta property="og:image:alt" content="Self-portrait of Jeremy Scott wearing glasses and a gray beanie.">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1413">
+    <meta property="og:site_name" content="Jeremy Scott Portfolio">
+
+<!-- favicon image created/owned by me (Jeremy Scott) -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- Link to stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!--
+      Provenance notes:
+      Images: Graphic Design Projects Card Image.png and Web Development Projects Card Image.png are my own creation.
+      They were exported as WebP files at 480px, 960px, and 1536px wide (included JPEG fallbacks just in case).
+      Self portrait: My own selfie that I control the rights to. WebP versions at 480px, 800px, and 1200px wide.
+      SVG icons: HTML5, CSS3, Node, Python, React, and database icons were added. Social media SVGs are used as linked icons.
+      Video/embed: Midnight Line video is my own project hosted on my YouTube channel. 
+      Fonts: Inter and Poppins are imported into style.css from Google Fonts and use open-source font licenses with websafe fallbacks included.
+    -->
+</head>
+
+<body id="top">
+    <!-- Skip to main content link for keyboard users -->
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
+
+    <header class="site-header">
+        <div class="container">
+            <nav class="site-nav" aria-label="Primary navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="container">
+        <section id="contact" class="project-card contact-card">
+            <h1>Contact Me</h2>
+            <!-- Practice form only: no submission endpoint is configured. -->
+            <form action="#">
+                <p id="email-instructions">
+                    Enter your email address using the format name@example.com. This field is required.
+                </p>
+
+                <div class="form-field">
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="form-input"
+                        placeholder="name@example.com"
+                        autocomplete="email"
+                        aria-describedby="email-instructions"
+                        required>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+                <p>This form is a demonstration and does not send messages yet.</p>
+            </form>
+        </section>
+
+
+        <!-- btt -->
+        <a href="#top" class="back-to-top">Back to Top</a>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Jeremy Scott. GIT 414/514 Fall Session-A 62919 | 76175</p>
+
+        <!-- socials container -->
+        <div class="socials-container" aria-label="Social media links">
+            <a href="https://github.com/JeremyScott146/" aria-label="Jeremy Scott on GitHub">
+                <img src="assets/icons/github.svg" alt="" width="32" height="32">
+            </a>
+
+            <a href="https://www.instagram.com/steak_nachos/" aria-label="Jeremy Scott on Instagram">
+                <img src="assets/icons/instagram.svg" alt="" width="32" height="32">
+            </a>
+
+            <a href="https://www.linkedin.com/in/jeremy-scott-93b038147/" aria-label="Jeremy Scott on LinkedIn">
+                <img src="assets/icons/linkedin-svgrepo-com.svg" alt="" width="32" height="32">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

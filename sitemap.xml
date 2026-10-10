@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jeremyscott146.github.io/Module-4-Media-and-Typography-Optimization-Build-/</loc>
+    <loc>https://jeremyscott146.github.io/Module-4-Media-and-Typography-Optimization-Build-/
+         https://jeremyscott146.github.io/Module-4-Media-and-Typography-Optimization-Build-/about.html 
+         https://jeremyscott146.github.io/Module-4-Media-and-Typography-Optimization-Build-/projects.html 
+         https://jeremyscott146.github.io/Module-4-Media-and-Typography-Optimization-Build-/skills.html 
+         https://jeremyscott146.github.io/Module-4-Media-and-Typography-Optimization-Build-/contact.html 
+    </loc>
   </url>
 </urlset>

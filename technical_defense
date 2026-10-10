@@ -1,0 +1,12 @@
+# Technical Defense — Jeremy Scott Portfolio
+
+I built a five-page HTML/CSS portfolio for people who want to learn about my development and design work, see my most recent projects, review technical skills, and find ways to contact me. The navigation links directly to Home, About Me, Projects, Skills, and Contact, with a consistent header and footer.
+
+I organized my CSS into reset, base, layout, components, utilities, states, and overrides layers. Reusable cards, buttons, badges, and navigation styles use custom properties for consistency. Responsive CSS Grid, auto-fit/auto-fill, clamp(), logical properties, and a container query support different viewing widths without JavaScript.
+
+For media and accessibility, I use responsive WebP images with JPEG fallbacks, width and height attributes to reserve space, descriptive alt text, a titled video iframe with an external link, semantic headings, a skip link, visible keyboard focus, and reduced-motion and print rules. Each page has a distinct title and description, canonical and social metadata; the homepage has Person JSON-LD.
+
+I corrected the heading hierarchy and mismatched heading tags, expanded the sitemap to five pages, made the contact form for demonstration only! nonfunctional and separated the homepage from the full Projects and Skills pages.
+
+**Testing:** I added the Nu HTML and CSS validator results, performed a keyboard check, made sure the page has responsive widths and tested at 200% zoom, all links checked, Lighthouse test done, and browser compatibility was tested. 
+

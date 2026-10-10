@@ -532,7 +532,10 @@ Capstone - Portfolio Project
 
 @media print {
   .video-wrapper,
-  .back-to-t
+  .back-to-top {
+    display: none;
+  }
+}
 
 /* Module 5 accessibility additions */
 
@@ -578,5 +581,12 @@ Capstone - Portfolio Project
   .back-to-top {
     position: static;
     margin-block-start: var(--space-4);
+  }
+}
+/* Multi-page site now */ 
+@layer components {
+  main > section > h1 {
+    font-size: var(--text-2xl);
+    margin-block-end: var(--space-4);
   }
 }

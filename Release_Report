@@ -1,0 +1,20 @@
+# Release Report — Production Website Capstone
+
+**Student:** Jeremy Scott  
+**Date:** October 9, 2026  
+**Website:** https://jeremyscott146.github.io/Module-4-Media-and-Typography-Optimization-Build-/  
+**Repository:** https://github.com/JeremyScott146/Module-4-Media-and-Typography-Optimization-Build-
+
+## Release scope and audience
+Responsive portfolio website for recruiters, collaborators, instructors, and classmates to check out Jeremy Scott's web development and graphic design work.
+
+## Planning Package - Built from previous Modules
+Planning: page inventory, navigation and component plan, responsive goals, acceptance criteria (see planning folder).  
+Module 2: CSS layers, reusable components, utilities, states, print.  
+Module 3: Grid, clamp, logical properties, container queries, responsive behavior.  
+Module 4: responsive images, image dimensions, fonts, video.  
+Module 5: skip link, focus-visible, alt text, form label, iframe title, media alternative.  
+Module 6: titles, descriptions, canonical, Open Graph, Person JSON-LD, robots and sitemap.
+
+## Known limitations
+Contact form is demonstration-only. GitHub links for project cards take you to just my github profile. 
